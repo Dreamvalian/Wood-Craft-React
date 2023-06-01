@@ -1,1 +1,51 @@
 @import '../main';
+
+.footer {
+  background-color: $white;
+  text-align: center;
+  color: $grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .left-container {
+    max-width: 960px;
+    margin: auto;
+    padding-bottom: 1rem;
+    align-items: center;
+
+
+    img {
+      width: 128px;
+      height: 72px;
+      margin-right: 1rem;
+    }
+  }
+
+  .right-container {
+    background-color: $tertiary-color;
+    border-top-left-radius: 8rem;
+    color: $white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8rem;
+    padding: 2rem;
+
+    ul {
+      list-style: none;
+      padding: 1rem;
+      font-weight: 600;
+
+      li {
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+
+        a {
+          color: $white;
+          text-decoration: none
+        }
+      }
+    }
+  }
+}

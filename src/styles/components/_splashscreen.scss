@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #fff;
+  background-color: $black;
 
   &.visible {
     opacity: 1;
@@ -19,12 +19,12 @@
   }
 
   h1 {
-    color: $black;
+    color: $white;
     animation: fade-in 1s ease-in-out;
   }
 
   p {
-    color: #ccc;
+    color: $grey;
     animation: slide-up 1s ease-in-out;
   }
 
