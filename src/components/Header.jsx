@@ -1,50 +1,44 @@
-import React from "react";
-import Logo from "../assets/logo/logo-text.svg";
+import React from 'react';
+import { ShoppingCart, User } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  // const [activePage, setActivePage] = useState("");
-
-  // const handleNavLinkClick = (page) => {
-  //   setActivePage(page);
-  // };
-
   return (
-    <nav>
-      <a href="/#" className="site-title">
-        <img src={Logo} alt="logo" width="96" height="13.64" />
-      </a>
-      <ul className="nav-header">
-        <li>
-          {/* <NavLink
-              exact
-              to="/"
-              activeClassName="active"
-              onClick={() => handleNavLinkClick("projects")}
-            >
-              projects
-            </NavLink> */}
-          <a href="/#" className="nav-item">
-            our product
-          </a>
-        </li>
-        <li>
-          <a href="/#" className="nav-item">
-            about
-          </a>
-        </li>
-        <li>
-          <a href="/#" className="nav-item">
-            contact us
-          </a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="/#" className="nav-item">
-            profile
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav>
+        <Link to='/' className='site-title'>
+          <div>Wood</div>
+          <div>Craft</div>
+        </Link>
+        <ul className='nav-header'>
+          <li>
+            <Link to='/product' className='nav-item'>
+              products
+            </Link>
+          </li>
+          <li>
+            <Link to='/about' className='nav-item'>
+              about
+            </Link>
+          </li>
+          <li>
+            <Link to='/contact' className='nav-item'>
+              contact
+            </Link>
+          </li>
+          <li>
+            <a href='/' className='nav-icon'>
+              <ShoppingCart strokeWidth={1} />
+            </a>
+          </li>
+          <li>
+            <a href='/' className='nav-icon'>
+              <User strokeWidth={1} />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

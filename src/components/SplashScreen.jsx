@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Hero from "../pages/home/Hero";
-import "../styles/components/_splashscreen.scss";
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import Hero from '../pages/home/Home';
 
 const SplashScreen = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -13,16 +13,33 @@ const SplashScreen = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const splashScreenVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <div>
-      {isVisible ? (
-        <div className="splash-screen">
-          <h1>Welcome</h1>
-          <p>bla bla bla ...</p>
-        </div>
-      ) : (
-        <Hero setIsVisible={setIsVisible} />
-      )}
+      <AnimatePresence>
+        {isVisible ? (
+          <motion.div
+            className='splash-screen'
+            initial='hidden'
+            animate='visible'
+            exit='hidden'
+            variants={splashScreenVariants}>
+            <h1>Welcome</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              natus aut quas laboriosam commodi, aperiam, dignissimos enim iure
+              unde animi quasi optio, voluptatibus obcaecati! Est ipsam illo
+              voluptas corrupti ut.
+            </p>
+          </motion.div>
+        ) : (
+          <Hero setIsVisible={setIsVisible} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
