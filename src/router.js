@@ -23,7 +23,7 @@ const RoutesList = () => {
   } else {
     content = (
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<AuthPage />} />
         {/* Other routes */}
       </Routes>
     );
