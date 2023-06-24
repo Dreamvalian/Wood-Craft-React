@@ -1,88 +1,10 @@
 @import '../main';
 
-// Hero
-
-.hero {
-  display: flex;
-  padding-top: 4rem;
-
-  .left-hero {
-    width: 50%;
-    margin: auto;
-    padding: 5rem;
-
-    h1 {
-      font-family: $font-stack-heading;
-    }
-
-    button {
-      background-color: $tertiary-color;
-      color: $white;
-      padding: 8px 32px 8px 32px;
-      border: none;
-      border-radius: 8px;
-    }
-  }
-
-  .right-hero {
-    width: 50%;
-    margin: 0;
-    display: flex;
-
-    .hero-image {
-      margin-top: 2rem;
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      border-top-left-radius: 10rem;
-    }
-
-  }
-}
-
-// Testimony
-
-.Testimony {
+.home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-family: $font-stack-body;
-
-  h2 {
-    font-family: $font-stack-heading;
-  }
-
-  .testimony-container {
-    overflow: hidden;
-    padding-top: 2rem;
-
-    h3 {
-      border-left: 3px double $black;
-      padding-left: 2rem;
-    }
-
-    .testimony-content {
-      white-space: nowrap;
-      animation: marquee 60s linear infinite;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      gap: 2rem;
-      padding-bottom: 2rem;
-
-
-      // @keyframes marquee {
-      //   0% {
-      //     transform: translateX(100%);
-      //   }
-
-      //   100% {
-      //     transform: translateX(-100%);
-      //   }
-      // }
-    }
-  }
-
+  justify-content: center;
+  height: 100vh;
+  background-color: $color-typography-white;
 }

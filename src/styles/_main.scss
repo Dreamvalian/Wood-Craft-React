@@ -1,5 +1,13 @@
 @import "./variable";
 
+
+// Global Reset
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1;
+}
+
 body {
   margin: 0;
   font: 100% $font-stack-body;
@@ -17,28 +25,20 @@ code {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
-li {
-
-  list-style: none;
-  text-decoration: none;
-
-}
-
-// a {
-//   text-decoration: none !important;
-// }
-
-figure {
-
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
-
-// Font Size
 
 h1 {
   font-size: 3rem;
@@ -65,5 +65,47 @@ h6 {
 }
 
 p {
+  margin: 0;
   font-size: 1rem;
+}
+
+// List Styles
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+// Hyperlink Styles
+a {
+  text-decoration: none;
+}
+
+// Remove underline from links within headings
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+// Remove outline from focused elements
+*:focus {
+  outline: none;
+}
+
+// Remove default form styles
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
