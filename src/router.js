@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // Import Pages
 import SplashScreen from './components/SplashScreen';
-import AuthPage from './pages/account/AuthPage';
+// import AuthPage from './pages/account/AuthPage';
+import Home from './pages/home/Home';
 
 
 const RoutesList = () => {
@@ -23,7 +24,8 @@ const RoutesList = () => {
   } else {
     content = (
       <Routes>
-        <Route path="/" element={<AuthPage />} />
+        {/* <Route path="/" element={<AuthPage />} /> */}
+        <Route path="/" element={<Home />} />
         {/* Other routes */}
       </Routes>
     );

@@ -7,6 +7,28 @@ serif;
 $font-stack-body: 'Familjen Grotesk',
 sans-serif;
 
+// !Typography
+$line-height-heading: 1.2;
+$line-height-body: 1.4;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// !Border Radius
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 12px;
+
+// !Box Shadows
+$box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// !Transitions
+$transition-duration: 0.3s;
+$transition-easing: ease-in-out;
+
+
 // !Spacing
 
 $spacing-unit: 8px;
@@ -938,4 +960,67 @@ $color-gradient-primary-900-600-45-deg: linear-gradient(to bottom, #42307d 0%, #
 
 @mixin effect-style-portfolio-mockup-grid-shadow-md() {
   box-shadow: 32px 32px 64px #344054;
+}
+
+// !Custom Styles
+body {
+  font-family: $font-stack-body;
+  color: $color-typography-default;
+  background-color: $base-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-stack-heading;
+  line-height: $line-height-heading;
+}
+
+p {
+  line-height: $line-height-body;
+}
+
+.container {
+  padding: $padding-medium;
+}
+
+.button {
+  display: inline-block;
+  padding: $padding-small $padding-medium;
+  border-radius: $border-radius-medium;
+  background-color: $primary-color;
+  color: $color-typography-white;
+  font-weight: $font-weight-bold;
+  transition: background-color $transition-duration $transition-easing;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $color-typography-outline;
+  }
+}
+
+.alert {
+  padding: $padding-medium;
+  border-radius: $border-radius-small;
+  font-weight: $font-weight-medium;
+}
+
+.success {
+  background-color: $success-color;
+  color: $color-typography-white;
+}
+
+.warning {
+  background-color: $warning-color;
+  color: $color-typography-white;
+}
+
+.danger {
+  background-color: $danger-color;
+  color: $color-typography-white;
 }

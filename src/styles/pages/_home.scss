@@ -1,10 +1,107 @@
 @import '../main';
 
-.home {
+.homepage {
+  // margin-top: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: $color-typography-white;
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      // Headline styles
+      // ...
+    }
+
+    p {
+      // Tagline styles
+      // ...
+    }
+  }
+
+  .about-section {
+    // About section styles
+    // ...
+
+    h2 {
+      // Section title styles
+      // ...
+    }
+
+    p {
+      // Description styles
+      // ...
+    }
+  }
+
+  .pros-and-cons-section {
+    // Pros and cons section styles
+    // ...
+
+    h2 {
+      // Section title styles
+      // ...
+    }
+
+    h3 {
+      // Pros and cons title styles
+      // ...
+    }
+
+    ul {
+      // Pros and cons list styles
+      // ...
+    }
+  }
+
+  .testimonials-section {
+    // Testimonials section styles
+    // ...
+
+    h2 {
+      // Section title styles
+      // ...
+    }
+
+    div {
+      // Testimonial styles
+      // ...
+
+      h3 {
+        // Testimonial name styles
+        // ...
+      }
+
+      p {
+        // Testimonial feedback styles
+        // ...
+      }
+    }
+  }
+
+  .trusted-company-section {
+    // Trusted companies section styles
+    // ...
+
+    h2 {
+      // Section title styles
+      // ...
+    }
+
+    div {
+      // Company logo container styles
+      // ...
+
+      img {
+        // Company logo styles
+        // ...
+      }
+    }
+  }
 }
