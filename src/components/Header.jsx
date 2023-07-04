@@ -32,7 +32,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href='/' className='nav-icon'>
+            <a href='/login' className='nav-icon'>
               <User strokeWidth={1} />
             </a>
           </li>

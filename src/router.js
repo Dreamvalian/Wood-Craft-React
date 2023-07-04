@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // Import Pages
 import SplashScreen from './components/SplashScreen';
-// import AuthPage from './pages/account/AuthPage';
+import Login from './pages/account/AuthPage';
 import Home from './pages/home/Home';
 
 
@@ -26,6 +26,7 @@ const RoutesList = () => {
       <Routes>
         {/* <Route path="/" element={<AuthPage />} /> */}
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         {/* Other routes */}
       </Routes>
     );
